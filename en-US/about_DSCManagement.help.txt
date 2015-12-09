@@ -1,0 +1,27 @@
+TOPIC
+    about_DSC.Management
+
+SHORT DESCRIPTION
+    This module contains the functions / cmdlets to configure Desired State Confiuration (DSC) in 
+    a given environment and create the MOF files to be pulled in from the Pull server by the target
+    node.
+
+LONG DESCRIPTION
+    A detailed, full description of the subject or purpose of the module.
+
+Windows PowerShell and the DSC.Management Cmdlets
+
+          
+          Cmdlet                  Descriptions
+          ---------               -----------------------------------------------------
+          Send-TargetNodeConfig   Creates the MOF file and sends it to the target node.
+          
+
+EXAMPLES
+    Send-TargetNodeConfig -TargetNodes -OutputPath	: Sends the Pull server configuration to the target node.
+
+KEYWORDS
+    DSC, Pull, Push.
+
+SEE ALSO
+    Text-only references for further reading. Hyperlinks cannot work in the Windows PowerShell console.

@@ -1,0 +1,20 @@
+function Test-PullServerGuidCSV
+{
+    #Tests for an existing entry, by server name and returns the results as an object.
+    param
+    (
+        [String[]]$ComputerName,
+        [string]$path
+    )
+    
+    $contents = Read-PullServerGuidCSV -path $path
+
+    $data = $contents | ForEach-Object{
+        [pscustomobject]@{
+            PullServer = $_.PullServer
+            GUID = $_.GUID
+            Exists = if($_.PullServer -eq $ComputerName){$True}else{$False}
+        }
+    }
+    return $data
+}
